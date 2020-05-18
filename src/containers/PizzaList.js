@@ -14,9 +14,7 @@ class PizzaList extends Component {
           </tr>
         </thead>
         <tbody>
-          {
-            //render Pizza here
-          }
+          {this.props.pizzas.map(p => <Pizza pizza={p} key={p.id} onEditPizza={this.props.onEditPizza}/>) }
         </tbody>
       </table>
     );
